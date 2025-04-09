@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\ProductCategory;
+use Illuminate\Support\Collection;
 
 class PublicController extends Controller
 {
@@ -33,7 +34,7 @@ class PublicController extends Controller
         });
     }
 
-    public function categoriesWithProducts()
+    public function categoriesWithProducts(): Collection
     {
         return ProductCategory::with('products')->get();
     }
