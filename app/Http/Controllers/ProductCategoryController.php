@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\ProductCategory;
 use Illuminate\Http\Response;
 use Illuminate\Support\Collection;
@@ -36,7 +37,7 @@ class ProductCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(StoreCategoryRequest $request, productCategory $productCategory): ProductCategory
+    public function update(UpdateCategoryRequest $request, productCategory $productCategory): ProductCategory
     {
         $productCategory->update($request->validated());
 
