@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
-    protected $fillable = ['title', 'slug', 'description', 'category_id'];
     use HasFactory;
+    protected $fillable = ['title', 'slug', 'description', 'category_id'];
 
     public function category(): BelongsTo
     {

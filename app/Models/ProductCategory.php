@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ProductCategory extends Model
 {
-    protected $fillable = ['title', 'parent_id',];
     use HasFactory;
+    protected $fillable = ['title', 'parent_id',];
 
     public function parent(): BelongsTo
     {
